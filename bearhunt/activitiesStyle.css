@@ -1,0 +1,306 @@
+/* developmentstyle.css - Updated to match home page styling */
+
+* {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.title-with-bear {
+    font-size: 3.5rem;
+    color: #8B4513;
+    text-shadow: 3px 3px 0;
+    margin-bottom: 10px;
+    animation: bounce 2s infinite alternate;
+}
+
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    padding-top: 180px;
+    /* Fixed spacing issue */
+}
+
+/* Unified navbar styling */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #4CAF50, #8BC34A);
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideDown 1s ease-out;
+}
+
+/* Animation for navbar */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bear-icon {
+    font-size: 40px;
+    color: #795548;
+    margin-right: 15px;
+}
+
+/* styling for the boxes to makke them softer around the edges */
+.custom-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: large;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro {
+    background-color: #e8f5e9;
+    border-left: 8px solid #4CAF50;
+}
+
+.book-cover {
+    background-color: #e3f2fd;
+    border-left: 8px solid #2196F3;
+}
+.development {
+    background-color: #fff3e0;
+    border-left: 8px solid #FF9800;
+}
+
+.video-section {
+    background-color: #f3e5f5;
+    border-left: 8px solid hsl(348, 100%, 61%);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px 0;
+    height: 280px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Custom navbar item styling */
+.navbar-item {
+    color: white !important;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.navbar-item:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-radius: 5px;
+}
+
+/* Mobile menu styling */
+.navbar-burger {
+    color: white;
+}
+
+/* Title and subtitle in navbar */
+.navbar-title {
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.navbar-title h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-title p {
+    color: #e8f5e9;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+/* Adjust navbar layout */
+.navbar-menu {
+    background-color: transparent !important;
+    box-shadow: none;
+}
+
+.navbar-start {
+    margin: 0 auto;
+}
+
+/* TikTok embed styling */
+.tiktok-embed {
+    margin: 0 auto;
+    max-width: 605px;
+    min-width: 325px;
+}
+
+.tiktok-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+/* Equal height columns */
+.columns.is-equal-height {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columns.is-equal-height .column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar layout adjustments */
+.navbar-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.navbar-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    min-height: 70px;
+}
+
+.navbar-bottom {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+/* Book cover image styling */
+.book-cover-image {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.book-cover-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Improved text visibility */
+.custom-section .content,
+.custom-section .content p {
+    color: #2d5016 !important;
+    /* Dark green for better readability */
+}
+
+.custom-section .content ul li {
+    color: #2d5016 !important;
+    margin-bottom: 8px;
+}
+
+.custom-section .content strong {
+    color: #1a3a0f !important;
+    /* Even darker green for emphasis */
+}
+
+/* Fixed footer styling */
+footer {
+    background-color: #e8f5e9 !important;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 3px solid #4CAF50;
+}
+
+/* Better spacing for content */
+.content p {
+    margin-bottom: 1rem;
+}
+
+.content ul {
+    margin-top: 1rem;
+}
+
+/* Footer styling */
+footer {
+    position: static;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #FF9800, #F57C00);
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Navbar content styling for bear and title */
+.navbar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title-with-bear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bear animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}

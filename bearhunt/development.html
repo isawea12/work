@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development - We're Going on a Bear Hunt!</title>
+    <!-- Load Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="developmentstyle.css">
+</head>
+<body class="has-background-primary-light">
+    <!-- Single unified navbar with title and subtitle -->
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-container">
+            <div class="navbar-top">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="home.html">
+                            Home
+                        </a>
+                        <a class="navbar-item" href="activities.html">
+                            Activities
+                        </a>
+                        <a class="navbar-item" href="development.html">
+                            Development
+                        </a>
+                        <a class="navbar-item" href="contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title and subtitle section inside navbar -->
+            <div class="navbar-bottom">
+                <div class="navbar-content">
+                    <div class="navbar-title">
+                        <div class="title-with-bear">
+                            <div class="bear-icon">🐻</div>
+                            <h1 class="title is-1 mb-2">
+                                We're Going on a Bear Hunt!
+                            </h1>
+                        </div>
+                        <p class="subtitle">An exciting adventure for young explorers!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Using Bulma columns for layout to match home page structure -->
+    <div class="columns is-centered">
+        <div class="column is-10">
+            <div class="columns is-equal-height">
+                <div class="column is-half">
+                    <section class="custom-section intro my-6">
+                        <h2 class="title is-3 has-text-success">Child Development Overview</h2>
+                        <div class="content">
+                            <p>The "We're Going on a Bear Hunt" activity supports holistic child development by engaging multiple skills through play and storytelling.</p>
+                            <p>It combines physical movement, sensory exploration, and cognitive challenges in a fun, narrative-driven format.</p>
+                            <p>This page explores how the activity contributes to various developmental areas, building on the classic children's book.</p>
+                        </div>
+                    </section>
+
+                    <section class="custom-section book-cover my-6">
+                        <h2 class="title is-3 has-text-info">Key Developmental Benefits</h2>
+                        <div class="content">
+                            <p>The activity promotes:</p>
+                            <ul>
+                                <li><strong>Emotional Development</strong> - Helps children manage excitement and pretend fear in a safe environment.</li>
+                                <li><strong>Cognitive Skills</strong> - Encourages memory through repetition and problem-solving in the story's obstacles.</li>
+                                <li><strong>Sensory Integration</strong> - Uses sounds, movements, and imaginary textures to stimulate senses.</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column is-half">
+                    <section class="custom-section development my-6">
+                        <h2 class="title is-3 has-text-warning">Detailed Development Areas</h2>
+                        <div class="content">
+                            <p>Expanding on the core benefits:</p>
+                            <ul>
+                                <li><strong>Language and Communication</strong> - Repetitive phrases build vocabulary and rhythm awareness.</li>
+                                <li><strong>Physical Coordination</strong> - Actions like swishing through grass improve gross motor skills.</li>
+                                <li><strong>Story Sequencing</strong> - Teaches narrative structure and cause-effect relationships.</li>
+                                <li><strong>Social Skills</strong> - Group participation fosters teamwork and turn-taking.</li>
+                                <li><strong>Imagination</strong> - Encourages creative thinking and role-playing.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                   <section class="custom-section video-section my-6">
+                        <h2 class="title is-3 has-text-danger">Bear Hunt Video</h2>
+                        <div class="has-text-centered">
+                            <div class="tiktok-container">
+                                <!-- TikTok embed used ai here -->
+                                <blockquote class="tiktok-embed"
+                                    cite="https://www.tiktok.com/@lottiesnurseries/video/7551788629945781526"
+                                    data-video-id="7551788629945781526">
+                                    <section>
+                                        <a target="_blank" title="@lottiesnurseries"
+                                            href="https://www.tiktok.com/@lottiesnurseries?refer=embed">@lottiesnurseries</a>
+                                        <p>We Are Going On A Bear Hunt🐻</p>
+                                        <a target="_blank" title="♬ original sound - lottiesnurseries"
+                                            href="https://www.tiktok.com/music/original-sound-7551788616427637526?refer=embed">♬
+                                            original sound - lottiesnurseries</a>
+                                    </section>
+                                </blockquote>
+                            </div>
+                            <p class="has-text-dark">Watch the TikTok video of our bear hunt adventure!</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer>
+        <p class="has-text-weight-bold">Bear Hunt Activity • Designed for Early Years</p>
+    </footer>
+
+    <!-- TikTok embed script (if needed for actual embed) -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

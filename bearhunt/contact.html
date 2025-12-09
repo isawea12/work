@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - We're Going on a Bear Hunt!</title>
+    <!-- Load Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="contactStyle.css">
+</head>
+
+<body class="has-background-primary-light">
+    <!-- Single unified navbar with title and subtitle -->
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-container">
+            <div class="navbar-top">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="home.html">
+                            Home
+                        </a>
+                        <a class="navbar-item" href="activities.html">
+                            Activities
+                        </a>
+                        <a class="navbar-item" href="development.html">
+                            Development
+                        </a>
+                        <a class="navbar-item" href="contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title and subtitle section inside navbar -->
+            <div class="navbar-bottom">
+                <div class="navbar-content">
+                    <div class="navbar-title">
+                        <div class="title-with-bear">
+                            <div class="bear-icon">🐻</div>
+                            <h1 class="title is-1 mb-2">
+                                Contact Us
+                            </h1>
+                        </div>
+                        <p class="subtitle">We'd love to hear from you on your bear hunt adventure!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="columns is-centered">
+        <div class="column is-10">
+            <div class="columns is-equal-height">
+                <!-- Contact Form Column -->
+                <div class="column is-two-thirds">
+                    <section class="custom-section contact-form my-6">
+                        <h2 class="title is-3 has-text-info">Send Us a Message</h2>
+                        <div class="content">
+                            <p>Have questions about our bear hunt activities? Need help with planning? Found an issue with our website? We're here to help!</p>
+                            <p>Fill out the form below and we'll get back to you whenever we feel like it.</p>
+                            
+                            <form id="contactForm">
+                                <div class="field">
+                                    <label for="email">Your Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                                </div>
+                                
+                                <div class="field">
+                                    <label for="issue">Describe Your Issue or Question</label>
+                                    <textarea id="issue" name="issue" placeholder="Tell us about your bear hunt experience, ask a question, or let us know about any issues you've encountered..." required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-button">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                            </form>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contact Info Column -->
+                <div class="column is-one-third">
+                    <section class="custom-section contact-info my-6">
+                        <h2 class="title is-3 has-text-success">Contact Information</h2>
+                        <div class="content">
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    michael.rosen@yahoo.com
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    1800-CDH-786
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <strong>Address</strong><br>
+                                    64 Zoo Lane<br>
+                                    Bear Town, B17 4HU
+                                </div>
+                            </div>
+                            
+                            <div class="contact-info-item">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <strong>Response Time</strong><br>
+                                    We typically respond never
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer>
+        <p class="has-text-weight-bold">Bear Hunt Activity • Designed for Early Years</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+            
+            // Form submission handling
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form values
+                    const email = document.getElementById('email').value;
+                    const issue = document.getElementById('issue').value;
+                    
+                    // In a real application, you would send this data to a server
+                    // For this example, we'll just show an alert
+                    alert(`Thank you for your message! We'll respond to ${email} as soon as possible.`);
+                    
+                    // Reset the form
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

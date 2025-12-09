@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We're Going on a Bear Hunt!</title>
+    <!-- Load Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="homeStyle.css">
+</head>
+
+<body class="has-background-primary-light">
+    <!-- Single unified navbar with title and subtitle -->
+    <nav class="navbar is-success" role="navigation" aria-label="main navigation">
+        <div class="navbar-container">
+            <div class="navbar-top">
+                <div class="navbar-brand">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarMenu">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarMenu" class="navbar-menu">
+                    <div class="navbar-start">
+                        <a class="navbar-item" href="#">
+                            Home
+                        </a>
+                        <a class="navbar-item" href="activities.html">
+                            Activities
+                        </a>
+                        <a class="navbar-item" href="development.html">
+                            Development
+                        </a>
+                        <a class="navbar-item" href="contact.html">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Title and subtitle section inside navbar -->
+            <div class="navbar-bottom">
+                <div class="navbar-content">
+                    <div class="navbar-title">
+                        <div class="title-with-bear">
+                            <div class="bear-icon">🐻</div>
+                            <h1 class="title is-1 mb-2">
+                                We're Going on a Bear Hunt!
+                            </h1>
+                        </div>
+                        <p class="subtitle">An exciting adventure for young explorers!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Using Bulma columns for layout -->
+    <div class="columns is-centered">
+        <div class="column is-10">
+            <div class="columns is-equal-height">
+                <div class="column is-half">
+                    <section class="custom-section intro my-6">
+                        <h2 class="title is-3 has-text-success">Activity Introduction</h2>
+                        <div class="content">
+                            <p>Welcome to our bear hunt adventure! This activity is based on the popular children's
+                                story "We're Going on a Bear Hunt" by Michael Rosen and Helen Oxenbury.</p>
+                            <p>Children will embark on an imaginative journey through different environments, using
+                                their senses and creativity to explore the story.</p>
+                            <p>This interactive experience helps develop listening skills, coordination, and
+                                storytelling abilities while having lots of fun!</p>
+                        </div>
+                    </section>
+
+                    <section class="custom-section book-cover my-6">
+                        <h2 class="title is-3 has-text-info">Bear Hunt slideshow</h2>
+                        <div class="book-cover-image">
+                         <iframe 
+                            src="https://online.flipbuilder.com/rslc/kguq/" 
+                            width="100%" 
+                            height="600" 
+                            frameborder="0" 
+                            allowfullscreen>
+                        </iframe>
+                        </div>
+                        <div class="content">
+                            <p>The beloved children's book that inspires our adventure!</p>
+                            <p>Written by Michael Rosen and illustrated by Helen Oxenbury, this classic story has been
+                                entertaining children for generations with its repetitive text and engaging adventure.
+                            </p>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="column is-half">
+                    <section class="custom-section development my-6">
+                        <h2 class="title is-3 has-text-warning">Child Development</h2>
+                        <div class="content">
+                            <p>This activity helps children develop in many important ways:</p>
+                            <ul>
+                                <li><strong>Language and communication skills</strong> - Through repetition and
+                                    vocabulary building</li>
+                                <li><strong>Physical coordination</strong> - Through movement and actions that mimic the
+                                    story</li>
+                                <li><strong>Understanding of story sequencing</strong> - By following the narrative
+                                    structure</li>
+                                <li><strong>Social skills</strong> - Through group participation and shared experience
+                                </li>
+                                <li><strong>Imagination and creativity</strong> - By visualizing and acting out the
+                                    adventure</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="custom-section video-section my-6">
+                        <h2 class="title is-3 has-text-danger">Bear Hunt Video</h2>
+                        <div class="has-text-centered">
+                            <div class="tiktok-container">
+                                <!-- TikTok embed used ai here -->
+                                <blockquote class="tiktok-embed"
+                                    cite="https://www.tiktok.com/@lottiesnurseries/video/7551788629945781526"
+                                    data-video-id="7551788629945781526">
+                                    <section>
+                                        <a target="_blank" title="@lottiesnurseries"
+                                            href="https://www.tiktok.com/@lottiesnurseries?refer=embed">@lottiesnurseries</a>
+                                        <p>We Are Going On A Bear Hunt🐻</p>
+                                        <a target="_blank" title="♬ original sound - lottiesnurseries"
+                                            href="https://www.tiktok.com/music/original-sound-7551788616427637526?refer=embed">♬
+                                            original sound - lottiesnurseries</a>
+                                    </section>
+                                </blockquote>
+                            </div>
+                            <p class="has-text-dark">Watch the TikTok video of our bear hunt adventure!</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer>
+        <p class="has-text-weight-bold">Bear Hunt Activity • Designed for Early Years</p>
+    </footer>
+
+    <!-- TikTok embed script -->
+    <script async src="https://www.tiktok.com/embed.js"></script>
+
+    <script>
+        // Mobile menu toggle functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

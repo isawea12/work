@@ -1,0 +1,317 @@
+        * {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background-image: url(images/background.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            padding-top: 180px;
+        }
+
+        /* Unified navbar styling */
+        nav.navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            padding: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: slideDown 1s ease-out;
+        }
+
+        /* Animation for navbar */
+        .title-with-bear {
+            font-size: 3.5rem;
+            color: #8B4513;
+            text-shadow: 3px 3px 0;
+            margin-bottom: 10px;
+            animation: bounce 2s infinite alternate;
+        }
+
+        .bear-icon {
+            font-size: 40px;
+            color: #795548;
+            margin-right: 15px;
+        }
+
+        .custom-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: large;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form {
+            background-color: #e3f2fd;
+            border-left: 8px solid #2196F3;
+        }
+
+        .contact-info {
+            background-color: #e8f5e9;
+            border-left: 8px solid #4CAF50;
+        }
+
+        .faq {
+            background-color: #fff3e0;
+            border-left: 8px solid #FF9800;
+        }
+
+        /* Custom navbar item styling */
+        .navbar-item {
+            color: white !important;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-item:hover {
+            background-color: rgba(255, 255, 255, 0.2) !important;
+            border-radius: 5px;
+        }
+
+        /* Mobile menu styling */
+        .navbar-burger {
+            color: white;
+        }
+
+        /* Title and subtitle in navbar */
+        .navbar-title {
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .navbar-title h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar-title p {
+            color: #e8f5e9;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
+
+        /* Adjust navbar layout */
+        .navbar-menu {
+            background-color: transparent !important;
+            box-shadow: none;
+        }
+
+        .navbar-start {
+            margin: 0 auto;
+        }
+
+        /* Navbar layout adjustments */
+        .navbar-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .navbar-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 70px;
+        }
+
+        .navbar-bottom {
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        /* Improved text visibility */
+        .custom-section .content,
+        .custom-section .content p {
+            color: #2d5016 !important;
+        }
+
+        .custom-section .content ul li {
+            color: #2d5016 !important;
+            margin-bottom: 8px;
+        }
+
+        .custom-section .content strong {
+            color: #1a3a0f !important;
+        }
+
+        /* Form styling */
+        .contact-form .field {
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+            color: #2d5016;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #2196F3;
+            box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+        }
+
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            background: linear-gradient(to right, #4CAF50, #8BC34A);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Contact info styling */
+        .contact-info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-icon {
+            font-size: 1.5rem;
+            color: #4CAF50;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        /* FAQ styling */
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px dashed #FF9800;
+            padding-bottom: 1rem;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            color: #1a3a0f;
+            margin-bottom: 0.5rem;
+        }
+
+/* Fixed footer styling */
+footer {
+    background-color: #e8f5e9 !important;
+    padding: 2rem 1.5rem;
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 3px solid #4CAF50;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to right, #FF9800, #F57C00);
+    padding: 15px 0;
+    text-align: center;
+    color: white;
+    font-size: 1.1rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: slideUp 1s ease-out;
+}
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Navbar content styling for bear and title */
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .title-with-bear {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Bear animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .bear-icon {
+            animation: bounce 2s infinite alternate;
+        }
+
+        /* Animation for navbar */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .bear-icon {
+            font-size: 40px;
+            color: #795548;
+            margin-right: 15px;
+        }

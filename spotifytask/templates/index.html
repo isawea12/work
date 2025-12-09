@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Tracks</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Spotify Database Searcher Ting</h1>
+        </div>
+        <nav>
+            <a href="{{ url_for('spotify') }}">Home</a>
+            <a href="{{ url_for('top100') }}">Top 100 Tracks</a>
+        </nav>
+        <div class="search-container">
+            <form action="{{ url_for('search') }}" method="get">
+                <input type="text" name="track" placeholder="Search for tracks..." class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        {% if albums %}
+        <section class="content-section">
+            <h2>Popular Albums</h2>
+            <div class="card-container">
+                {% for album in albums %}
+                <div class="card">
+                    <div class="card-image"></div>
+                    <h3>{{ album }}</h3>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if tracks %}
+        <section class="content-section">
+            <h2>Tracks</h2>
+            <div class="track-list">
+                {% for track in tracks %}
+                <div class="track-item">
+                    <div class="track-info">
+                        <span class="track-name">{{ track[0] }}</span>
+                        <span class="album-name">Album: {{ track[1] }}</span>
+                        <span class="popularity">Popularity: {{ track[2] }}</span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+    </main>
+</body>
+</html>
