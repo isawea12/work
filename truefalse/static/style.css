@@ -1,0 +1,100 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    background: #f4f7fb;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 48px auto;
+    padding: 16px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    color: #0b3d91;
+}
+
+.score {
+    background: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 1px 3px rgba(16,24,40,0.06);
+    font-weight: 600;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 6px 18px rgba(16,24,40,0.08);
+}
+
+.headline {
+    font-size: 1.25rem;
+    margin: 0 0 18px 0;
+}
+
+.choices {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn-real { background: linear-gradient(90deg,#2b8aef,#1e6fe6); }
+.btn-fake { background: linear-gradient(90deg,#ef4444,#d32f2f); }
+
+.result {
+    margin-top: 18px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.result:contains('Correct') {
+    color: #059669;
+}
+
+.controls {
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.next {
+    padding: 8px 12px;
+    background: #eef2ff;
+    color: #3730a3;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.reset {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    background: #fff;
+    cursor: pointer;
+}
+
+.reset-form { margin: 0; }

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fake News Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Fake News Detector</h1>
+            <div class="score">Score: <span id="score">{{ score }}</span></div>
+        </header>
+
+        <main class="card">
+            <h2 class="headline">{{ headline }}</h2>
+
+            <form action="/check" method="POST" class="choices">
+                <button class="btn btn-real" type="submit" name="answer" value="true">Real</button>
+                <button class="btn btn-fake" type="submit" name="answer" value="false">Fake</button>
+            </form>
+
+            {% if result %}
+                <h3 class="result">{{ result }}</h3>
+                <div class="controls">
+                    <a class="next" href="/">Next Headline</a>
+                    <form action="/reset" method="POST" class="reset-form">
+                        <button class="reset" type="submit">Reset Score</button>
+                    </form>
+                </div>
+            {% endif %}
+        </main>
+    </div>
+
+</body>
+</html>
